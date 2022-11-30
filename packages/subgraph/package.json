@@ -1,0 +1,18 @@
+{
+  "name": "@web3-scaffold/subgraph",
+  "private":true,
+  "engines": {
+    "node": "16",
+    "pnpm": "6"
+  },
+  "scripts": {
+    "codegen": "graph codegen subgraph*.yaml",
+    "build": "graph build subgraph*.yaml",
+    "deploy:matic": "graph deploy --node https://api.thegraph.com/deploy/ holic/example-nft subgraph-matic.yaml",
+    "deploy:mumbai": "graph deploy --node https://api.thegraph.com/deploy/ holic/example-nft-testnet subgraph-mumbai.yaml"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.25.1",
+    "@graphprotocol/graph-ts": "0.24.1"
+  }
+}
