@@ -12,7 +12,7 @@ import {
 import { EthereumProviders } from "../EthereumProviders";
 
 export const graphClient = createGraphClient({
-  url: "https://api.thegraph.com/subgraphs/name/0xb07576490934b28F3D85142A1A94E82c00d2Df71/cakeday-nft",
+  url: "https://api.thegraph.com/subgraphs/name/rssi/cakeday-nft",
 });
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
