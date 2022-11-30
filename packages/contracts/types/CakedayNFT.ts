@@ -28,7 +28,7 @@ import type {
   PromiseOrValue,
 } from "./common";
 
-export interface ExampleNFTInterface extends utils.Interface {
+export interface CakedayNFTInterface extends utils.Interface {
   functions: {
     "MAX_SUPPLY()": FunctionFragment;
     "PRICE()": FunctionFragment;
@@ -392,12 +392,12 @@ export type TransferEvent = TypedEvent<
 
 export type TransferEventFilter = TypedEventFilter<TransferEvent>;
 
-export interface ExampleNFT extends BaseContract {
+export interface CakedayNFT extends BaseContract {
   connect(signerOrProvider: Signer | Provider | string): this;
   attach(addressOrName: string): this;
   deployed(): Promise<this>;
 
-  interface: ExampleNFTInterface;
+  interface: CakedayNFTInterface;
 
   queryFilter<TEvent extends TypedEvent>(
     event: TypedEventFilter<TEvent>,

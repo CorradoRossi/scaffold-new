@@ -7,7 +7,7 @@ import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IERC2981, IERC165} from "@openzeppelin/contracts/interfaces/IERC2981.sol";
 import {IRenderer} from "./IRenderer.sol";
 
-/// @author frolic.eth
+/// @author rssi.eth
 /// @title  ERC721 base contract
 /// @notice ERC721-specific functionality to keep the actual NFT contract more
 ///         readable and focused on the mint/project mechanics.

@@ -1,6 +1,6 @@
-import { ExampleNFT__factory } from "@web3-scaffold/contracts/types";
+import { CakedayNFT__factory } from "@web3-scaffold/contracts/types";
 
-const contractInterface = ExampleNFT__factory.createInterface();
+const contractInterface = CakedayNFT__factory.createInterface();
 
 // for (const [error, errorFragment] of Object.entries(contractInterface.errors)) {
 //   console.log(contractInterface.getSighash(errorFragment), errorFragment.name);

@@ -2,11 +2,11 @@
 pragma solidity >=0.8.10 <0.9.0;
 
 import "forge-std/Test.sol";
-import "../src/ExampleNFT.sol";
+import "../src/CakedayNFT.sol";
 import "../src/IRenderer.sol";
 
-contract ExampleNFTTest is Test {
-    ExampleNFT private nft;
+contract CakedayNFTTest is Test {
+    CakedayNFT private nft;
 
     address private owner = mkaddr("owner");
     address private minter = mkaddr("minter");
@@ -20,7 +20,7 @@ contract ExampleNFTTest is Test {
     }
 
     function setUp() public {
-        nft = new ExampleNFT();
+        nft = new CakedayNFT();
         nft.transferOwnership(owner);
         vm.deal(owner, 10 ether);
         vm.deal(minter, 10 ether);

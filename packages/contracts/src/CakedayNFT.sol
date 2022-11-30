@@ -3,14 +3,14 @@ pragma solidity ^0.8.9;
 
 import {ERC721Base} from "./ERC721Base.sol";
 
-/// @author frolic.eth
-/// @title  Example NFT
-contract ExampleNFT is ERC721Base {
+/// @author rssi.eth
+/// @title  Cakeday
+contract CakedayNFT is ERC721Base {
     // ****************** //
     // *** INITIALIZE *** //
     // ****************** //
 
-    constructor() ERC721Base("Example NFT", "EXAMPLE", 0.1 ether, 10_000) {}
+    constructor() ERC721Base("Cakeday NFT", "CAKEDAY", 0.1 ether, 10_000) {}
 
     // ************ //
     // *** MINT *** //

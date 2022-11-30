@@ -1,24 +1,24 @@
-import ExampleNFTGoerli from "@web3-scaffold/contracts/deploys/goerli/ExampleNFT.json";
-import { ExampleNFT__factory } from "@web3-scaffold/contracts/types";
+import CakedayNFTGoerli from "@web3-scaffold/contracts/deploys/goerli/CakedayNFT.json";
+import { CakedayNFT__factory } from "@web3-scaffold/contracts/types";
 import { useContractRead } from "wagmi";
 
 import { provider, targetChainId } from "./EthereumProviders";
 
-// I would have used `ExampleNFT__factory.connect` to create this, but we may
+// I would have used `CakedayNFT__factory.connect` to create this, but we may
 // not have a provider ready to go. Any interactions with this contract should
-// use `exampleNFTContract.connect(providerOrSigner)` first.
+// use `cakedayNFTContract.connect(providerOrSigner)` first.
 
-// export const exampleNFTContract = new Contract(
-//   ExampleNFTGoerli.deployedTo,
-//   ExampleNFT__factory.abi
-// ) as ExampleNFT;
+// export const cakedayNFTContract = new Contract(
+//   CakedayNFTGoerli.deployedTo,
+//   CakedayNFT__factory.abi
+// ) as CakedayNFT;
 
-export const exampleNFTContract = ExampleNFT__factory.connect(
-  ExampleNFTGoerli.deployedTo,
+export const cakedayNFTContract = CakedayNFT__factory.connect(
+  CakedayNFTGoerli.deployedTo,
   provider({ chainId: targetChainId })
 );
 
-export const useExampleNFTContractRead = (
+export const useCakedayNFTContractRead = (
   readConfig: Omit<
     Parameters<typeof useContractRead>[0],
     "addressOrName" | "contractInterface"
@@ -26,6 +26,6 @@ export const useExampleNFTContractRead = (
 ) =>
   useContractRead({
     ...readConfig,
-    addressOrName: ExampleNFTGoerli.deployedTo,
-    contractInterface: ExampleNFT__factory.abi,
+    addressOrName: CakedayNFTGoerli.deployedTo,
+    contractInterface: CakedayNFT__factory.abi,
   });

@@ -94,10 +94,10 @@ contract ERC721BaseTest is Test {
 
     function testBaseTokenURI() public {
         vm.prank(owner);
-        nft.setBaseTokenURI("ipfs://example/");
+        nft.setBaseTokenURI("ipfs://cakeday/");
         vm.prank(minter);
         nft.mint{value: 0.1 ether}(1);
-        assertEq(nft.tokenURI(1), "ipfs://example/1");
+        assertEq(nft.tokenURI(1), "ipfs://cakeday/1");
     }
 
     function testRenderer() public {
