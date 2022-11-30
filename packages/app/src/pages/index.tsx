@@ -29,6 +29,7 @@ const HomePage: NextPage = () => {
         <p>
           {(isMounted ? totalSupply.data?.toNumber().toLocaleString() : null) ??
             "??"}
+          /
           {(isMounted ? maxSupply.data?.toNumber().toLocaleString() : null) ??
             "??"}{" "}
           minted
