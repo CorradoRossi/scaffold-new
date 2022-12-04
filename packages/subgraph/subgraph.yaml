@@ -4,7 +4,7 @@ schema:
 dataSources:
   - kind: ethereum
     name: CakedayNFT
-    network: mainnet
+    network: goerli
     source:
       abi: CakedayNFT
       address: "0x98AC54ab7a3843b2454cE06D9AE83aEbEC5986db"
